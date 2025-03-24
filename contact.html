@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us | TruGreen Inspired</title>
+  <!-- Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  />
+  <!-- Optional: Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+  />
+
+</head>
+<body>
+  <!-- Middle Navigation Row (Desktop Only) -->
+  <div class="container-fluid">
+    <div class="row nav-row d-none d-lg-flex">
+      <!-- Left: Button group for pages -->
+      <div class="col-3 d-flex align-items-center">
+        <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+          <a href="/" class="btn btn-custom active">Residential</a>
+          <a href="commercial.html" class="btn btn-custom">Commercial</a>
+          <a href="careers.html" class="btn btn-custom">Careers</a>
+        </div>
+      </div>
+      <!-- Center: (Empty or additional content can go here) -->
+      <div class="col-4"></div>
+      <!-- Right: Search, Login, Language -->
+      <div class="col-5 d-flex align-items-center justify-content-center">
+        <!-- Search box -->
+        <form class="d-none d-md-flex me-3">
+          <input
+            type="search"
+            class="form-control search-input"
+            placeholder="Search"
+            aria-label="Search"
+          />
+        </form>
+        <!-- Login button -->
+        <a href="/signup.html" class="btn login-btn me-2">Sign up</a>
+        <!-- Language toggle with US flag -->
+        <a href="#" class="d-flex align-items-center text-white text-decoration-none ms-2">
+          <img
+            src="https://www.trugreen.com/images/header/us-icon.svg"
+            alt="US Flag"
+            class="rounded-circle"
+            style="width: 24px; height: 24px; margin-right: 5px;"
+          />
+          US/EN
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <!-- Logo / Brand -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img
+          src="https://www.trugreen.com/images/logo.svg"
+          alt="TruGreen Logo"
+          style="height: 30px;"
+        />
+      </a>
+      <!-- Hamburger Menu Button (Offcanvas) -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#mobileMenu"
+        aria-controls="mobileMenu"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Desktop Nav Items (Dropdowns) - visible on lg+ -->
+      <div class="collapse navbar-collapse d-none d-lg-flex" id="desktopNav">
+        <!-- Left side nav (example) -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- Lawn Dropdown -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="lawnDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Lawn
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="lawnDropdown">
+              <li><a class="dropdown-item" href="#">Lawn Services</a></li>
+              <li><a class="dropdown-item" href="#">Lawn Plans</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">More Lawn Options</a></li>
+            </ul>
+          </li>
+          <!-- Tree & Shrub Dropdown -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="treeDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Tree &amp; Shrub
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="treeDropdown">
+              <li><a class="dropdown-item" href="#">Tree Services</a></li>
+              <li><a class="dropdown-item" href="#">Shrub Plans</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">More Tree &amp; Shrub Options</a></li>
+            </ul>
+          </li>
+          <!-- Pest Dropdown -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="pestDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Pest
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="pestDropdown">
+              <li><a class="dropdown-item" href="#">Mosquito Control</a></li>
+              <li><a class="dropdown-item" href="#">Tick Services</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">More Pest Options</a></li>
+            </ul>
+          </li>
+          <!-- Why TruGreen -->
+          <li class="nav-item">
+            <a class="nav-link" href="#">Why TruGreen</a>
+          </li>
+          <!-- Lawn Care 101 -->
+          <li class="nav-item">
+            <a class="nav-link" href="#">Lawn Care 101</a>
+          </li>
+          <!-- Support -->
+          <li class="nav-item">
+            <a class="nav-link" href="#">Support</a>
+          </li>
+        </ul>
+
+        <!-- Right side: ZIP Code & "See Pricing" -->
+        <div class="d-flex align-items-center">
+          <!-- ZIP Code -->
+          <div class="dropdown">
+            <button
+              id="zipDropdownBtn"
+              type="button"
+              class="btn btn-outline-secondary me-2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              ZIP Code <i class="bi bi-caret-down-fill"></i>
+            </button>
+          
+            <div
+              class="dropdown-menu dropdown-menu-end p-3"
+              style="min-width: 250px; max-width: 90vw;"
+            >
+              <div class="mb-2">
+                <strong>Update Zip Code</strong>
+              </div>
+              <form id="zipForm">
+                <div class="mb-3">
+                  <label for="zipInput" class="form-label">Enter your Zip Code</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="zipInput"
+                    placeholder="e.g. 78613"
+                  />
+                </div>
+                <button type="submit" class="btn btn-success w-100">Update</button>
+              </form>
+            </div>
+          </div>
+          <!-- See Pricing -->
+          <a href="pricing.html" class="btn btn-success">See Pricing</a>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- OFFCANVAS (Hamburger Menu on Mobile) -->
+  <div
+    class="offcanvas offcanvas-top"
+    tabindex="-1"
+    id="mobileMenu"
+    aria-labelledby="mobileMenuLabel"
+  >
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="mobileMenuLabel">
+        <!-- Top-left brand or text -->
+        <img
+          src="https://www.trugreen.com/images/logo.svg"
+          alt="TruGreen Logo"
+          style="height: 25px; margin-right: 8px;"
+        />
+      </h5>
+      <!-- Close button (top-right) -->
+      <button
+        type="button"
+        class="btn-close text-reset"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- Search bar (like in screenshot) -->
+      <div class="input-group mb-3">
+        <span class="input-group-text">
+          <i class="bi bi-search"></i>
+        </span>
+        <input
+          type="search"
+          class="form-control"
+          placeholder="Search"
+          aria-label="Search"
+        />
+      </div>
+
+      <!-- ZIP code at top-right (optional) -->
+      <!-- <div class="d-flex justify-content-end mb-3">
+        <button type="button" class="btn btn-outline-secondary">
+          78613 <i class="bi bi-caret-down-fill"></i>
+        </button>
+      </div> -->
+
+      <!-- Main Menu Items -->
+      <ul class="navbar-nav mb-3">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Lawn</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tree &amp; Shrub</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pest</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Why TruGreen</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Lawn Care 101</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Support</a>
+        </li>
+      </ul>
+
+      <!-- Branch Finder -->
+      <input
+        type="text"
+        class="branch-finder"
+        placeholder="Branch Finder"
+      />
+
+      <!-- See Pricing Button -->
+      <button class="btn btn-success w-100 mb-3">
+        See Pricing
+      </button>
+
+      <!-- Log In -->
+      <div class="mb-2">
+        <a href="/signup.html" class="nav-link p-0" style="font-size: 1rem;">Sign up</a>
+      </div>
+      <!-- Call -->
+      <div class="mb-2">
+        <a
+          href="tel:1-844-424-5477"
+          class="nav-link p-0"
+          style="font-size: 1rem;"
+        >
+          Call: 1-844-424-5477
+        </a>
+      </div>
+      <!-- US/EN -->
+      <div class="mb-2 d-flex align-items-center">
+        <img
+          src="https://www.trugreen.com/images/header/us-icon.svg"
+          alt="US Flag"
+          class="rounded-circle me-2"
+          style="width: 24px; height: 24px;"
+        />
+        <a href="#" class="nav-link p-0" style="font-size: 1rem;">US/EN</a>
+      </div>
+      <!-- Switch to Commercial -->
+      <div class="mb-2">
+        <a href="#" class="nav-link p-0" style="font-size: 1rem;">
+          Switch to Commercial <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+      <!-- Explore TruGreen Careers -->
+      <div>
+        <a href="#" class="nav-link p-0" style="font-size: 1rem;">
+          Explore TruGreen Careers <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero mb-5">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="display-5 fw-bold">Get in Touch</h1>
+      <p class="lead">We're here to help you create a healthier, greener lawn.</p>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <div class="container pb-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h2 class="mb-4 text-center">Contact Us to Get Started</h2>
+        <form>
+          <div class="mb-3">
+            <label for="nameInput" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nameInput"
+              placeholder="Your Name"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="emailInput" class="form-label">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="emailInput"
+              placeholder="name@example.com"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="dateInput" class="form-label">Preferred Date</label>
+            <input type="date" class="form-control" id="dateInput" />
+          </div>
+          <div class="mb-3">
+            <label for="messageInput" class="form-label">Message</label>
+            <textarea
+              class="form-control"
+              id="messageInput"
+              rows="4"
+              placeholder="Tell us more about your lawn or any questions you have."
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-success btn-lg w-100">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer (Optional) -->
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <!-- Top Row: Columns of Links -->
+      <div class="row">
+        <!-- Column 1: About TruGreen -->
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold mb-3">About TruGreen</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Executive Staff</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Newsroom</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Careers &gt;</a></li>
+          </ul>
+        </div>
+  
+        <!-- Column 2: Services -->
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold mb-3">Services</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">Lawn Care Plan Comparison</a></li>
+            <li><a href="#" class="text-white text-decoration-none">TruShrub</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Pest Control Comparison</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Branch Finder</a></li>
+          </ul>
+        </div>
+  
+        <!-- Column 3: Resources -->
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold mb-3">Resources</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Learning Center</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Blogs</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+          </ul>
+        </div>
+  
+        <!-- Column 4: For Our Customers -->
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold mb-3">For Our Customers</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">1-844-XXXX-XXXX</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Account Login &amp; Register</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Request a Call Back</a></li>
+            <li><a href="/contact.html" class="text-white text-decoration-none">Customer Support</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Disclaimer Section -->
+      <div class="row mt-3">
+        <div class="col-12">
+          <small class="text-muted">
+            <p>
+              <strong>Special price of 50% off your 1st lawn application.</strong> The 50% discount applies to new 
+              residential EasyPay or PrePay customers only and is for the 1st application of lawn service. 
+              Availability of services may vary by geography. Not to be combined with or used in conjunction 
+              with any other offer or discount.
+            </p>
+            <p>
+              <strong>Guarantee applies to full plan customers only.</strong> If you are not 100% satisfied, 
+              we will gladly visit your property between scheduled visits to ensure your satisfaction.
+            </p>
+            <p>
+              <strong>Offer valid at participating TruGreen locations.</strong> Availability of services may vary by region. 
+              Additional restrictions may apply.
+            </p>
+            <p>
+              &copy; 2025 TruGreen Limited Partnership. All rights reserved. 
+              <a href="#" class="text-white text-decoration-underline">Site Map</a> |
+              <a href="#" class="text-white text-decoration-underline">Privacy Policy</a> |
+              <a href="#" class="text-white text-decoration-underline">Terms and Conditions</a> |
+              <a href="#" class="text-white text-decoration-underline">California Privacy Policy</a>
+            </p>
+          </small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (with Popper) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
+</body>
+</html>

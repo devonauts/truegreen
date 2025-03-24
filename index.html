@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TruGreen Inspired</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- sdsf-->
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-success text-white text-center py-2">
+    Sign up today and get 50% off your first service!
+  </div>
+
+  <!-- Middle Navigation Row (Desktop Only) -->
+  <div class="container-fluid">
+    <div class="row nav-row d-none d-lg-flex">
+      <!-- Left: Button group for pages -->
+      <div class="col-3 d-flex align-items-center">
+        <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+          <a href="/" class="btn btn-custom active">Residential</a>
+          <a href="commercial.html" class="btn btn-custom">Commercial</a>
+          <a href="careers.html" class="btn btn-custom">Careers</a>
+        </div>
+      </div>
+      <!-- Center: (Empty or additional content can go here) -->
+      <div class="col-4"></div>
+      <!-- Right: Search, Login, Language -->
+      <div class="col-5 d-flex align-items-center justify-content-center">
+        <!-- Search box -->
+        <form class="d-none d-md-flex me-3">
+          <input
+            type="search"
+            class="form-control search-input"
+            placeholder="Search"
+            aria-label="Search"
+          />
+        </form>
+        <!-- Login button -->
+        <a href="/signup.html" class="btn login-btn me-2">Sign up</a>
+        <!-- Language toggle with US flag -->
+        <a href="#" class="d-flex align-items-center text-white text-decoration-none ms-2">
+          <img
+            src="https://www.trugreen.com/images/header/us-icon.svg"
+            alt="US Flag"
+            class="rounded-circle"
+            style="width: 24px; height: 24px; margin-right: 5px;"
+          />
+          US/EN
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <!-- Logo / Brand -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img
+          src="https://www.trugreen.com/images/logo.svg"
+          alt="TruGreen Logo"
+          style="height: 30px;"
+        />
+      </a>
+      <!-- Hamburger Menu Button (Offcanvas) -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#mobileMenu"
+        aria-controls="mobileMenu"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Desktop Nav Items (Dropdowns) - visible on lg+ -->
+      <div class="collapse navbar-collapse d-none d-lg-flex" id="desktopNav">
+        <!-- Left side nav (example) -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- Lawn Dropdown -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="lawnDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Lawn
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="lawnDropdown">
+              <li><a class="dropdown-item" href="#">Lawn Services</a></li>
+              <li><a class="dropdown-item" href="#">Lawn Plans</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">More Lawn Options</a></li>
+            </ul>
+          </li>
+          <!-- Tree & Shrub Dropdown -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="treeDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Tree &amp; Shrub
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="treeDropdown">
+              <li><a class="dropdown-item" href="#">Tree Services</a></li>
+              <li><a class="dropdown-item" href="#">Shrub Plans</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">More Tree &amp; Shrub Options</a></li>
+            </ul>
+          </li>
+          <!-- Pest Dropdown -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="pestDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Pest
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="pestDropdown">
+              <li><a class="dropdown-item" href="#">Mosquito Control</a></li>
+              <li><a class="dropdown-item" href="#">Tick Services</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">More Pest Options</a></li>
+            </ul>
+          </li>
+          <!-- Why TruGreen -->
+          <li class="nav-item">
+            <a class="nav-link" href="#">Why TruGreen</a>
+          </li>
+          <!-- Lawn Care 101 -->
+          <li class="nav-item">
+            <a class="nav-link" href="#">Lawn Care 101</a>
+          </li>
+          <!-- Support -->
+          <li class="nav-item">
+            <a class="nav-link" href="#">Support</a>
+          </li>
+        </ul>
+
+        <!-- Right side: ZIP Code & "See Pricing" -->
+        <div class="d-flex align-items-center">
+          <!-- ZIP Code -->
+          <div class="dropdown">
+            <button
+              id="zipDropdownBtn"
+              type="button"
+              class="btn btn-outline-secondary me-2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              ZIP Code <i class="bi bi-caret-down-fill"></i>
+            </button>
+          
+            <div
+              class="dropdown-menu dropdown-menu-end p-3"
+              style="min-width: 250px; max-width: 90vw;"
+            >
+              <div class="mb-2">
+                <strong>Update Zip Code</strong>
+              </div>
+              <form id="zipForm">
+                <div class="mb-3">
+                  <label for="zipInput" class="form-label">Enter your Zip Code</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="zipInput"
+                    placeholder="e.g. 78613"
+                  />
+                </div>
+                <button type="submit" class="btn btn-success w-100">Update</button>
+              </form>
+            </div>
+          </div>
+          <!-- See Pricing -->
+          <a href="pricing.html" class="btn btn-success">See Pricing</a>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- OFFCANVAS (Hamburger Menu on Mobile) -->
+  <div
+    class="offcanvas offcanvas-top"
+    tabindex="-1"
+    id="mobileMenu"
+    aria-labelledby="mobileMenuLabel"
+  >
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="mobileMenuLabel">
+        <!-- Top-left brand or text -->
+        <img
+          src="https://www.trugreen.com/images/logo.svg"
+          alt="TruGreen Logo"
+          style="height: 25px; margin-right: 8px;"
+        />
+      </h5>
+      <!-- Close button (top-right) -->
+      <button
+        type="button"
+        class="btn-close text-reset"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- Search bar (like in screenshot) -->
+      <div class="input-group mb-3">
+        <span class="input-group-text">
+          <i class="bi bi-search"></i>
+        </span>
+        <input
+          type="search"
+          class="form-control"
+          placeholder="Search"
+          aria-label="Search"
+        />
+      </div>
+
+      <!-- ZIP code at top-right (optional) -->
+      <!-- <div class="d-flex justify-content-end mb-3">
+        <button type="button" class="btn btn-outline-secondary">
+          78613 <i class="bi bi-caret-down-fill"></i>
+        </button>
+      </div> -->
+
+      <!-- Main Menu Items -->
+      <ul class="navbar-nav mb-3">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Lawn</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tree &amp; Shrub</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pest</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Why TruGreen</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Lawn Care 101</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Support</a>
+        </li>
+      </ul>
+
+      <!-- Branch Finder -->
+      <input
+        type="text"
+        class="branch-finder"
+        placeholder="Branch Finder"
+      />
+
+      <!-- See Pricing Button -->
+      <button class="btn btn-success w-100 mb-3">
+        See Pricing
+      </button>
+
+      <!-- Log In -->
+      <div class="mb-2">
+        <a href="/signup.html" class="nav-link p-0" style="font-size: 1rem;">Sign up</a>
+      </div>
+      <!-- Call -->
+      <div class="mb-2">
+        <a
+          href="tel:1-844-424-5477"
+          class="nav-link p-0"
+          style="font-size: 1rem;"
+        >
+          Call: 1-844-424-5477
+        </a>
+      </div>
+      <!-- US/EN -->
+      <div class="mb-2 d-flex align-items-center">
+        <img
+          src="https://www.trugreen.com/images/header/us-icon.svg"
+          alt="US Flag"
+          class="rounded-circle me-2"
+          style="width: 24px; height: 24px;"
+        />
+        <a href="#" class="nav-link p-0" style="font-size: 1rem;">US/EN</a>
+      </div>
+      <!-- Switch to Commercial -->
+      <div class="mb-2">
+        <a href="#" class="nav-link p-0" style="font-size: 1rem;">
+          Switch to Commercial <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+      <!-- Explore TruGreen Careers -->
+      <div>
+        <a href="#" class="nav-link p-0" style="font-size: 1rem;">
+          Explore TruGreen Careers <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Hero Section -->
+  <section
+    class="hero-section d-flex align-items-center"
+    style="
+      background: url('https://www.trugreen.com/images/homepage_banner_d.webp')
+        no-repeat center center/cover;
+      height: 80vh;
+      position: relative;
+    "
+  >
+    <div class="container text-white">
+      <div class="row">
+        <div class="col-md-7">
+          <h1 class="hero-title">
+            A golf course quality lawn for less than you think.
+          </h1>
+          <p class="hero-subtitle">
+            Get the lush green lawn you've always wanted. Sign up now and see the
+            difference.
+          </p>
+          <div class="mt-4">
+            <a href="#getStarted" class="btn btn-success btn-lg me-2">
+              Get Started
+            </a>
+            <a href="#logIn" class="btn btn-outline-light btn-lg">
+              Log In
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <!-- Services Section -->
+<div class="container py-5">
+    <h2 class="text-center mb-4">Explore our services.</h2>
+    <div class="row">
+      <!-- Lawn Care -->
+      <div class="col-md-4 text-center mb-4">
+        <!-- Icon / Image -->
+        <img
+          src="https://www.trugreen.com/sites/default/files/Lawn%25201.svg?w=128"
+          alt="Lawn Icon"
+          class="mb-3"
+        />
+        <!-- Service Title -->
+        <h4>Lawn Care</h4>
+        <!-- Service Description -->
+        <p class="text-muted">
+          Enjoy a greener, healthier lawn without the work. We offer a variety of plans so you can choose exactly what you need.
+        </p>
+        <!-- Learn More Button -->
+        <a href="#" class="btn btn-outline-dark">Learn More</a>
+      </div>
+  
+      <!-- Tree & Shrub Care -->
+      <div class="col-md-4 text-center mb-4">
+        <img
+          src="https://www.trugreen.com/sites/default/files/Tree-And-Shrub%25201.svg?w=128"
+          alt="Tree Icon"
+          class="mb-3"
+        />
+        <h4>Tree &amp; Shrub Care</h4>
+        <p class="text-muted">
+          Help your landscape thrive all year long with services designed to protect and care for your trees and shrubs.
+        </p>
+        <a href="#" class="btn btn-outline-dark">Learn More</a>
+      </div>
+  
+      <!-- Pest Control -->
+      <div class="col-md-4 text-center mb-4">
+        <img
+          src="https://www.trugreen.com/sites/default/files/2025-03/Mosquito.png?w=128"
+          alt="Pest Icon"
+          class="mb-3"
+        />
+        <h4>Pest Control</h4>
+        <p class="text-muted">
+          Protect your property, your family, and your home from all kinds of pests with our science-based solutions.
+        </p>
+        <a href="#" class="btn btn-outline-dark">Learn More</a>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+<section class="container py-5">
+    <!-- Section Heading -->
+    <h2 class="text-center mb-5 display-5">Tee up your perfect lawn.</h2>
+  
+    <div class="row g-4">
+      <!-- Card 1: Pro-Level Results -->
+      <div class="col-lg-12">
+        <div 
+          class="card text-white border-0 h-100"
+          style="border-radius: 1rem; overflow: hidden;"
+        >
+          <!-- Background Image -->
+          <img 
+            src="https://content.trugreen.com/sites/default/files/Pro-Level_Results_desktop.webp" 
+            class="card-img" 
+            alt="Pro-Level Results"
+          />
+          <!-- Text Overlay -->
+          <div 
+            class="card-img-overlay d-flex flex-column justify-content-end"
+            style="background: rgba(0, 0, 0, 0.4);" 
+            <!-- optional translucent overlay -->
+          >
+            <h4 class="card-title fw-bold">Pro-Level Results</h4>
+            <p class="card-text">
+              As the Official Lawn Care Treatment Provider of the PGA TOUR, delivering pro-level results 
+              is what we do best. With locally tailored plans, we ensure your lawn thrives all year long.
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 2: We Stand By Our Work -->
+      <div class="col-md-6">
+        <div 
+          class="card text-white border-0 h-100"
+          style="border-radius: 1rem; overflow: hidden;"
+        >
+          <img 
+            src="https://content.trugreen.com/sites/default/files/Stand-by-our-work_desktop.webp" 
+            class="card-img" 
+            alt="We Stand By Our Work"
+          />
+          <div 
+            class="card-img-overlay d-flex flex-column justify-content-end"
+            style="background: rgba(0, 0, 0, 0.4);"
+          >
+            <h4 class="card-title fw-bold">We Stand By Our Work</h4>
+            <p class="card-text">
+              Your happiness is our top priority. If you're not 100% satisfied between visits, we'll make 
+              things right—guaranteed.
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 3: Best Lawn. Best Price. -->
+      <div class="col-md-6">
+        <div 
+          class="card text-white border-0 h-100"
+          style="border-radius: 1rem; overflow: hidden;"
+        >
+          <img 
+            src="https://content.trugreen.com/sites/default/files/Best-lawn_desktop.webp" 
+            class="card-img" 
+            alt="Best Lawn. Best Price."
+          />
+          <div 
+            class="card-img-overlay d-flex flex-column justify-content-end"
+            style="background: rgba(0, 0, 0, 0.4);"
+          >
+            <h4 class="card-title fw-bold">Best Lawn. Best Price.</h4>
+            <p class="card-text">
+              Get a lawn you'll love at a price you'll love even more. With our Price Match Guarantee, 
+              we'll match the price of any competitor and beat their results.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="container py-5">
+    <!-- Section Heading -->
+    <h2 class="text-center mb-4 display-6">
+      Greener, healthier lawns made easy.
+    </h2>
+  
+    <!-- Tabs (Nav) -->
+    <ul class="nav nav-tabs justify-content-center" id="serviceTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link active"
+          id="lawn-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#lawn"
+          type="button"
+          role="tab"
+          aria-controls="lawn"
+          aria-selected="true"
+        >
+          Lawn Care
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="treeShrub-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#treeShrub"
+          type="button"
+          role="tab"
+          aria-controls="treeShrub"
+          aria-selected="false"
+        >
+          TruShrub Tree &amp; Shrub
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="pest-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#pest"
+          type="button"
+          role="tab"
+          aria-controls="pest"
+          aria-selected="false"
+        >
+          Pest Control
+        </button>
+      </li>
+    </ul>
+  
+    <!-- Tab Panes -->
+    <div class="tab-content" id="serviceTabsContent">
+      <!-- Lawn Care Tab -->
+      <div
+        class="tab-pane fade show active"
+        id="lawn"
+        role="tabpanel"
+        aria-labelledby="lawn-tab"
+      >
+        <div class="row align-items-center py-4">
+          <!-- Specialist Image -->
+          <div class="col-md-4 mb-3 mb-md-0">
+            <img
+              src="https://www.trugreen.com/sites/default/files/2024-06/tab_01_d.webp?w=128"
+              alt="TruGreen Specialist"
+              class="img-fluid rounded"
+            />
+          </div>
+          <!-- Steps -->
+          <div class="col-md-8">
+            <h5 class="fw-bold mb-2">STEP 1</h5>
+            <h6 class="mb-1">Lawn Assessment</h6>
+            <p class="mb-4">
+              In your first visit, one of our specialists will visit your property and create a tailored plan based on your lawn's needs.
+            </p>
+  
+            <h5 class="fw-bold mb-2">STEP 2</h5>
+            <h6 class="mb-1">Regular Specialist Visits</h6>
+            <p class="mb-4">
+              A specialist will visit your property every few weeks to make sure your lawn stays at its best. After each visit, you'll get a service summary with tips and suggestions for care between visits.
+            </p>
+  
+            <h5 class="fw-bold mb-2">STEP 3</h5>
+            <h6 class="mb-1">Guaranteed Results</h6>
+            <p class="mb-4">
+              It can take 7–14 days before you start to see fewer weeds and greener grass, but with our Guarantee, we'll gladly visit your property between scheduled visits to make sure you're happy with your results.
+            </p>
+  
+            <button class="btn btn-success">Get Started</button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- TruShrub Tree & Shrub Tab -->
+      <div
+        class="tab-pane fade"
+        id="treeShrub"
+        role="tabpanel"
+        aria-labelledby="treeShrub-tab"
+      >
+        <div class="row align-items-center py-4">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <img
+              src="https://www.trugreen.com/sites/default/files/2024-06/tab_02_d.webp?w=128"
+              alt="Tree & Shrub Specialist"
+              class="img-fluid rounded"
+            />
+          </div>
+          <div class="col-md-8">
+            <h5 class="fw-bold mb-2">STEP 1</h5>
+            <h6 class="mb-1">Landscape Evaluation</h6>
+            <p class="mb-4">
+              We'll inspect your trees and shrubs for pests, diseases, and other stressors, then create a custom care plan.
+            </p>
+  
+            <h5 class="fw-bold mb-2">STEP 2</h5>
+            <h6 class="mb-1">Seasonal Treatments</h6>
+            <p class="mb-4">
+              Your trees and shrubs get nutrients, fertilization, and protective treatments at key points throughout the year.
+            </p>
+  
+            <h5 class="fw-bold mb-2">STEP 3</h5>
+            <h6 class="mb-1">Year-Round Health</h6>
+            <p class="mb-4">
+              We monitor your landscape between visits to ensure it’s thriving. If you need us to re-check or adjust, we’ll be there.
+            </p>
+  
+            <button class="btn btn-success">Get Started</button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Pest Control Tab -->
+      <div
+        class="tab-pane fade"
+        id="pest"
+        role="tabpanel"
+        aria-labelledby="pest-tab"
+      >
+        <div class="row align-items-center py-4">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <img
+              src="https://www.trugreen.com/sites/default/files/2024-06/tab_03_d.webp?w=128"
+              alt="Pest Control Specialist"
+              class="img-fluid rounded"
+            />
+          </div>
+          <div class="col-md-8">
+            <h5 class="fw-bold mb-2">STEP 1</h5>
+            <h6 class="mb-1">Initial Property Inspection</h6>
+            <p class="mb-4">
+              We identify common pests (like mosquitoes or ticks) and design a control plan that fits your property.
+            </p>
+  
+            <h5 class="fw-bold mb-2">STEP 2</h5>
+            <h6 class="mb-1">Targeted Treatments</h6>
+            <p class="mb-4">
+              We'll treat pest hotspots around your yard and create a barrier to keep bugs away from your home.
+            </p>
+  
+            <h5 class="fw-bold mb-2">STEP 3</h5>
+            <h6 class="mb-1">Ongoing Protection</h6>
+            <p class="mb-4">
+              We provide scheduled treatments to maintain a pest-free environment, with free re-service if pests persist.
+            </p>
+  
+            <button class="btn btn-success">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-5" style="background-color: #111; color: #fff;">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Column: Carousel of Testimonials -->
+        <div class="col-md-5 mb-4 mb-md-0">
+          <p class="text-uppercase fw-bold mb-2" style="opacity: 0.7;">
+            Our customers say it best.
+          </p>
+  
+          <!-- Bootstrap Carousel -->
+          <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Carousel inner with multiple slides -->
+            <div class="carousel-inner">
+              <!-- Slide 1 -->
+              <div class="carousel-item active">
+                <h2 class="mb-4" style="line-height: 1.3;">
+                  “Takes a burden off us and we can spend more time enjoying our outdoor space.”
+                </h2>
+                <p class="fw-light" style="opacity: 0.9;">— Loretta G</p>
+              </div>
+              <!-- Slide 2 -->
+              <div class="carousel-item">
+                <h2 class="mb-4" style="line-height: 1.3;">
+                  “Our lawn looks better than ever. We couldn't be happier with the results!”
+                </h2>
+                <p class="fw-light" style="opacity: 0.9;">— John D</p>
+              </div>
+              <!-- Slide 3 -->
+              <div class="carousel-item">
+                <h2 class="mb-4" style="line-height: 1.3;">
+                  “Professional and reliable service—worth every penny!”
+                </h2>
+                <p class="fw-light" style="opacity: 0.9;">— Sarah M</p>
+              </div>
+              <!-- Add more slides if desired -->
+            </div>
+  
+            <!-- Carousel Controls -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+  
+        <!-- Right Column: Image Grid -->
+        <div class="col-md-7">
+          <div class="row g-2">
+            <!-- 1st row -->
+            <div class="col-6">
+              <img 
+                src="https://www.trugreen.com/sites/default/files/styles/webp_convert/public/images/tgdifference/imagescroll1.jpg.webp?itok=Ev2Dr-TY" 
+                class="img-fluid rounded" 
+                alt="Lawn image 1"
+              />
+            </div>
+            <div class="col-6">
+              <img 
+                src="https://www.trugreen.com/sites/default/files/styles/webp_convert/public/images/tgdifference/imagescroll2.jpg.webp?itok=Aad4MdC7" 
+                class="img-fluid rounded" 
+                alt="Lawn image 2"
+              />
+            </div>
+  
+            <!-- 2nd row -->
+            <div class="col-6">
+              <img 
+                src="https://www.trugreen.com/sites/default/files/styles/webp_convert/public/images/tgdifference/imagescroll3.jpg.webp?itok=2RRrohko" 
+                class="img-fluid rounded" 
+                alt="Lawn image 3"
+              />
+            </div>
+            <div class="col-6">
+              <img 
+                src="https://www.trugreen.com/sites/default/files/styles/webp_convert/public/images/tgdifference/imagescroll4.jpg.webp?itok=h8FuCGdM" 
+                class="img-fluid rounded" 
+                alt="Lawn image 4"
+              />
+            </div>
+  
+            <!-- 3rd row -->
+            <div class="col-6">
+              <img 
+                src="https://www.trugreen.com/sites/default/files/styles/webp_convert/public/images/tgdifference/imagescroll5.jpg.webp?itok=C_XUQrLO" 
+                class="img-fluid rounded" 
+                alt="Lawn image 5"
+              />
+            </div>
+            <div class="col-6">
+              <img 
+                src="https://www.trugreen.com/sites/default/files/styles/webp_convert/public/images/tgdifference/imagescroll6.jpg.webp?itok=cUO6p96r" 
+                class="img-fluid rounded" 
+                alt="Lawn image 6"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="py-5">
+    <div class="container">
+      <!-- Heading and Description Row -->
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h2 class="mb-2">Find a TruGreen specialist near you.</h2>
+          <p class="mb-0">
+            TruGreen has more than 200 branches nationwide serving over 2 million customers. 
+            To find lawn care near you, explore the map or enter your ZIP code.
+          </p>
+        </div>
+        <!-- ZIP Code Input -->
+        <div class="col-md-4 mt-3 mt-md-0 text-md-end">
+          <label for="zipCode" class="form-label visually-hidden">Enter ZIP Code</label>
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              id="zipCode"
+              placeholder="Enter ZIP Code"
+              aria-label="Enter ZIP Code"
+            />
+            <button class="btn btn-success" type="button" id="zipBtn">
+              Go
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Map Placeholder (replace with real map embed or image) -->
+      <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d16199371.882025415!2d-112.73391371549884!3d34.6521428738488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1742772054042!5m2!1sen!2sus"
+      class="w-100 rounded"
+      style="border: 0; height: 450px;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+    
+    
+  
+      <!-- Info Cards -->
+      <div class="row mt-4 g-3">
+        <!-- Card 1: Give us a call -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Give us a call.</h5>
+              <p class="card-text">
+                Talk with an expert and get a free quote.
+                <br />
+                Mon–Fri: 8:00 AM–9:00 PM EST
+              </p>
+              <a href="tel:1-844-529-4251" class="btn btn-success">
+                1-844-529-4251
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2: Get a Call Back -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Get a Call Back</h5>
+              <p class="card-text">
+                One of our experts will be in touch as soon as possible.
+              </p>
+              <button class="btn btn-outline-success">
+                Request a Call Back
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3: Need Support? -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Need support?</h5>
+              <p class="card-text">
+                Get help, find answers, and connect with us if you have questions.
+              </p>
+              <a href="#" class="btn btn-outline-success">
+                See Support Options
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <!-- Top Row: Columns of Links -->
+      <div class="row">
+        <!-- Column 1: About TruGreen -->
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold mb-3">About TruGreen</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Executive Staff</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Newsroom</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Careers &gt;</a></li>
+          </ul>
+        </div>
+  
+        <!-- Column 2: Services -->
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold mb-3">Services</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">Lawn Care Plan Comparison</a></li>
+            <li><a href="#" class="text-white text-decoration-none">TruShrub</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Pest Control Comparison</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Branch Finder</a></li>
+          </ul>
+        </div>
+  
+        <!-- Column 3: Resources -->
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold mb-3">Resources</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Learning Center</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Blogs</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+          </ul>
+        </div>
+  
+        <!-- Column 4: For Our Customers -->
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold mb-3">For Our Customers</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">1-844-XXXX-XXXX</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Account Login &amp; Register</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Request a Call Back</a></li>
+            <li><a href="/contact.html" class="text-white text-decoration-none">Customer Support</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Disclaimer Section -->
+      <div class="row mt-3">
+        <div class="col-12">
+          <small class="text-muted">
+            <p>
+              <strong>Special price of 50% off your 1st lawn application.</strong> The 50% discount applies to new 
+              residential EasyPay or PrePay customers only and is for the 1st application of lawn service. 
+              Availability of services may vary by geography. Not to be combined with or used in conjunction 
+              with any other offer or discount.
+            </p>
+            <p>
+              <strong>Guarantee applies to full plan customers only.</strong> If you are not 100% satisfied, 
+              we will gladly visit your property between scheduled visits to ensure your satisfaction.
+            </p>
+            <p>
+              <strong>Offer valid at participating TruGreen locations.</strong> Availability of services may vary by region. 
+              Additional restrictions may apply.
+            </p>
+            <p>
+              &copy; 2025 TruGreen Limited Partnership. All rights reserved. 
+              <a href="#" class="text-white text-decoration-underline">Site Map</a> |
+              <a href="#" class="text-white text-decoration-underline">Privacy Policy</a> |
+              <a href="#" class="text-white text-decoration-underline">Terms and Conditions</a> |
+              <a href="#" class="text-white text-decoration-underline">California Privacy Policy</a>
+            </p>
+          </small>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+
+  <!-- Bootstrap JS (with Popper) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>
