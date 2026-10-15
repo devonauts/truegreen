@@ -34,6 +34,7 @@ function validateEmail(email) {
       element.style.display =
         element.style.display === "none" ? "block" : "none";
     }
+    console.log("toggled")
   }
   
     // Grab elements
